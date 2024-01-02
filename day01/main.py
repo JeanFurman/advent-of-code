@@ -11,7 +11,7 @@ full_numbers = {
 }
 
 with open('puzzle_input.txt', 'r') as input:
-    sum = 0
+    total = 0
     numbers = []
     for row in input:
         for index, char in enumerate(row):
@@ -21,6 +21,6 @@ with open('puzzle_input.txt', 'r') as input:
                 v = full_numbers.get(row[index:index+i])
                 if v is not None:
                     numbers.append(v)
-        sum += int(f"{numbers[0]}{numbers[-1]}")
+        total += int(f"{numbers[0]}{numbers[-1]}")
         numbers = []
-    print(f"The sum is: {sum}")
+    print(f"The sum is: {total}")
